@@ -186,8 +186,8 @@ public class SingleDatePickerMainActivityWithDoublePicker extends AppCompatActiv
                 //.backgroundColor(Color.BLACK)
                 //.mainColor(Color.GREEN)
 
-                .displayHours(false)
-                .displayMinutes(false)
+                .displayHours(true)
+                .displayMinutes(true)
                 .displayDays(false)
                 .displayMonth(true)
                 .displayDaysOfMonth(true)

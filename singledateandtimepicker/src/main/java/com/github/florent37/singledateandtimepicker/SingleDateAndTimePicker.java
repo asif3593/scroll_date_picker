@@ -51,8 +51,8 @@ public class SingleDateAndTimePicker extends LinearLayout {
     public static final int ALIGN_RIGHT = 2;
     private DateHelper dateHelper = new DateHelper();
 
-    private static final CharSequence FORMAT_24_HOUR = "EEE d MMM H:mm";
-    private static final CharSequence FORMAT_12_HOUR = "EEE d MMM h:mm a";
+    private static final CharSequence FORMAT_24_HOUR = "EEE d MM H:mm";
+    private static final CharSequence FORMAT_12_HOUR = "EEE d MM h:mm a";
 
     @NonNull
     private final WheelYearPicker yearsPicker;
