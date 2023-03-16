@@ -40,7 +40,7 @@ android:orientation="horizontal">
         android:id="@+id/monthPicker"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-
+        android:visibility="invisible"
         app:wheel_atmospheric="true"
         app:wheel_item_align="right"
         android:layout_toStartOf="@+id/view_dash"/>
