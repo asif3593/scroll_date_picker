@@ -69,8 +69,8 @@ public class SingleDateAndTimePicker extends LinearLayout {
     private final WheelMinutePicker minutesPicker;
     @NonNull
     private final WheelHourPicker hoursPicker;
-    @NonNull
-    private final WheelAmPmPicker amPmPicker;
+   /* @NonNull
+    private final WheelAmPmPicker amPmPicker;*/
 
     private List<WheelPicker> pickers = new ArrayList<>();
 
@@ -117,14 +117,14 @@ public class SingleDateAndTimePicker extends LinearLayout {
         daysPicker = findViewById(R.id.daysPicker);
         minutesPicker = findViewById(R.id.minutesPicker);
         hoursPicker = findViewById(R.id.hoursPicker);
-        amPmPicker = findViewById(R.id.amPmPicker);
+        //amPmPicker = findViewById(R.id.amPmPicker);
         dtSelector = findViewById(R.id.dtSelector);
 
         pickers.addAll(Arrays.asList(
                 daysPicker,
                 minutesPicker,
                 hoursPicker,
-                amPmPicker,
+               // amPmPicker,
                 daysOfMonthPicker,
                 monthPicker,
                 yearsPicker
@@ -230,14 +230,14 @@ public class SingleDateAndTimePicker extends LinearLayout {
                     }
                 });
 
-        amPmPicker
+     /*   amPmPicker
                 .setAmPmListener(new WheelAmPmPicker.AmPmListener() {
                     @Override
                     public void onAmPmChanged(WheelAmPmPicker picker, boolean isAm) {
                         updateListener();
                         checkMinMaxDate(picker);
                     }
-                });
+                });*/
 
         setDefaultDate(this.defaultDate); //update displayed date
     }
@@ -286,8 +286,8 @@ public class SingleDateAndTimePicker extends LinearLayout {
         this.displayHours = displayHours;
         hoursPicker.setVisibility(displayHours ? VISIBLE : GONE);
 
-        setIsAmPm(this.isAmPm);
-        hoursPicker.setIsAmPm(isAmPm);
+       // setIsAmPm(this.isAmPm);
+      //  hoursPicker.setIsAmPm(isAmPm);
     }
 
     public void setDisplayMonthNumbers(boolean displayMonthNumbers) {
@@ -385,12 +385,12 @@ public class SingleDateAndTimePicker extends LinearLayout {
         }
     }
 
-    public void setIsAmPm(boolean isAmPm) {
+  /*  public void setIsAmPm(boolean isAmPm) {
         this.isAmPm = isAmPm;
 
         amPmPicker.setVisibility((isAmPm && displayHours) ? VISIBLE : GONE);
         hoursPicker.setIsAmPm(isAmPm);
-    }
+    }*/
 
     public boolean isAmPm() {
         return isAmPm;
@@ -488,9 +488,9 @@ public class SingleDateAndTimePicker extends LinearLayout {
 
     public Date getDate() {
         int hour = hoursPicker.getCurrentHour();
-        if (isAmPm && amPmPicker.isPm()) {
+        /*if (isAmPm && amPmPicker.isPm()) {
             hour += PM_HOUR_ADDITION;
-        }
+        }*/
         final int minute = minutesPicker.getCurrentMinute();
 
         final Calendar calendar = Calendar.getInstance();

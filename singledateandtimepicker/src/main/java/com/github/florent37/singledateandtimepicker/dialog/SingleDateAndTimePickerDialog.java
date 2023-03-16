@@ -175,9 +175,9 @@ public class SingleDateAndTimePickerDialog extends BaseDialog {
             picker.setDefaultDate(defaultDate);
         }
 
-        if (isAmPm != null) {
+       /* if (isAmPm != null) {
             picker.setIsAmPm(isAmPm);
-        }
+        }*/
 
         picker.setDisplayDays(displayDays);
         picker.setDisplayMonths(displayMonth);
